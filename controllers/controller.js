@@ -55,5 +55,13 @@ module.exports = {
         .catch(err => {
             res.status(404).send("not found")
         })  
+    },
+
+    showApi(req, res){
+        res.redirect('https://documenter.getpostman.com/view/5698727/RztfxCj9')
+    },
+
+    fallback(req, res){
+        res.send('Got lost? This is a 404 page')
     }
 }

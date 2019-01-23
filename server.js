@@ -27,6 +27,8 @@ app.put('/addlike/:id',         ctrl_fb.addLike);
 app.put('/addrate/:id/:num',    ctrl_fb.addRate);
 app.post('/user',               ctrl_us.addUser);
 app.get('/user/:id',            ctrl_us.getProfile);
+app.get('/api',                 ctrl.showApi);        //api page
+app.all('*',                    ctrl.fallback);      //fallback
 
 app.listen(port,
      () => console.log(`listening on port ${port}`));
